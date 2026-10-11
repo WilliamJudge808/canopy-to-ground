@@ -1,0 +1,21 @@
+# MiT-B5 with coastline + absolute-elevation inputs, the bilinear decoder with a learned 2 m skip,
+# and a sea-level loss on County-coastline sea pixels. Two members of the published ensemble (seeds 0 and 1).
+data:
+  root: data/cache
+  layer_root: data/layers
+  layers: [vivid, naip]
+  coast: true
+model:
+  rgb_encoder: mit_b5
+  coast_inputs: true
+  decoder_v2: true
+loss: {mae: 0.3, detail: 0.5, corr: 1.0, amp: 0.5, fft: 0.2, water: 0.3, sea_level: 0.0, sea_deadzone: 0.5}
+optim:
+  epochs: 66
+  batch_size: 8
+  lr: 1.0e-3
+  backbone_lr_mult: 0.3
+  freeze_epochs: 2
+  scales: [1, 1.333, 2]
+  fused_attention: true
+  fused_adam: true

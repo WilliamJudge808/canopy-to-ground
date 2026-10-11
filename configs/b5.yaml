@@ -1,0 +1,18 @@
+# MiT-B5 imagery encoder, with a larger encoder learning rate (0.3x vs 0.1x) than MiT-B2.
+# Two members of the published ensemble (seeds 0 and 1).
+data:
+  root: data/cache
+  layer_root: data/layers
+  layers: [vivid, naip]
+model:
+  rgb_encoder: mit_b5
+loss: {mae: 0.3, detail: 0.5, corr: 1.0, amp: 0.5, fft: 0.2}
+optim:
+  epochs: 66
+  batch_size: 8
+  lr: 1.0e-3
+  backbone_lr_mult: 0.3
+  freeze_epochs: 2
+  scales: [1, 2, 4]
+  fused_attention: true
+  fused_adam: true

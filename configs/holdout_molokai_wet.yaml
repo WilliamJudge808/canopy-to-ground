@@ -1,0 +1,24 @@
+# Generalisation check: the b5_coast recipe with all of wet east Molokai withheld from training,
+# then scored on its 1,211 chips (seed 0; the "withheld region" row of the results).
+data:
+  root: data/cache
+  layer_root: data/layers
+  layers: [vivid, naip]
+  coast: true
+  regions: [east_maui, west_maui, molokai_dry, lanai, kahoolawe]
+model:
+  rgb_encoder: mit_b5
+  coast_inputs: true
+  decoder_v2: true
+loss: {mae: 0.3, detail: 0.5, corr: 1.0, amp: 0.5, fft: 0.2, water: 0.3, sea_level: 0.0, sea_deadzone: 0.5}
+optim:
+  epochs: 66
+  batch_size: 8
+  lr: 1.0e-3
+  backbone_lr_mult: 0.3
+  freeze_epochs: 2
+  scales: [1, 1.333, 2]
+  fused_attention: true
+  fused_adam: true
+val_split: train
+val_regions: [molokai_wet]

@@ -1,0 +1,18 @@
+# SegFormer MiT-B2 imagery encoder. Two members of the published ensemble (seeds 0 and 1).
+# The seed-0 member was trained with fused_attention and fused_adam off; the two paths agree to float tolerance.
+data:
+  root: data/cache
+  layer_root: data/layers
+  layers: [vivid, naip]
+model:
+  rgb_encoder: mit_b2
+loss: {mae: 0.3, detail: 0.5, corr: 1.0, amp: 0.5, fft: 0.2}
+optim:
+  epochs: 66
+  batch_size: 8
+  lr: 1.0e-3
+  backbone_lr_mult: 0.1
+  freeze_epochs: 2
+  scales: [1, 2, 4]
+  fused_attention: true
+  fused_adam: true
