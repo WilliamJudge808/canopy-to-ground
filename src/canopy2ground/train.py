@@ -68,7 +68,7 @@ class TrainConfig:
 
     @classmethod
     def from_yaml(cls, path: str | Path, **data_overrides) -> TrainConfig:
-        raw = yaml.safe_load(Path(path).read_text())
+        raw = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
 
         def build(dc, d):
             names = {f.name for f in fields(dc)}

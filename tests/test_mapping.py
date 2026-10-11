@@ -231,6 +231,7 @@ def test_tms_range():
 
 def test_merge_lidar_model_gap(tmp_path):
     """Lidar wins, the model is an exact 2x2 average, shallow water is 0, an enclosed void gets the prior."""
+    pytest.importorskip("scipy")
     r = 1.0
     x0, y1 = -17390000.0, 2380000.0
     n = 512                                                          # output px at 2 m

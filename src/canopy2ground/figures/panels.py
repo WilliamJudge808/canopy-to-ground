@@ -45,7 +45,7 @@ def crop_store(store: Path, bbox, prior: str | Path, layer: str = "naip"):
     from rasterio.transform import Affine
     from rasterio.warp import Resampling, reproject
 
-    g = json.loads((store / "grid.json").read_text())
+    g = json.loads((store / "grid.json").read_text(encoding="utf-8"))
     to = Transformer.from_crs("EPSG:4326", CRS, always_xy=True).transform
     xa, ya = to(bbox[0], bbox[1])
     xb, yb = to(bbox[2], bbox[3])

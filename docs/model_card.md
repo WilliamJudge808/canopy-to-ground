@@ -40,8 +40,9 @@ Details and confidence intervals are in [results.md](results.md).
   about one for one.
 - **Cliffs and gulch walls.** These dominate the error tail. The model damps relief it cannot place, and the
   amplitude loss only partly counters this.
-- **Imagery gaps.** Tiles where the base photograph is missing are not predicted. Where an extra layer is missing,
-  the model sees zeros plus an availability flag.
+- **Imagery gaps.** Tiles where the prior is mostly void are not predicted. Where the County photograph is
+  missing, the Vivid mosaic stands in as the base photograph. Where an extra layer is missing, the model sees
+  zeros plus an availability flag.
 - **Off-survey shift.** Median error is 2.7× higher on ICESat-2 unsurveyed ground (1.26 m, a different metric)
   and 5.6× higher on the withheld region (2.57 m) than on the validation chips. Generalisation to other islands rests
   on one withheld region and one seed.

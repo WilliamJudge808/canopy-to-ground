@@ -14,7 +14,7 @@ wavelengths back into the objective:
 * ``band_amplitude_loss``: symmetric log-ratio of per-octave amplitude.
   Under uncertainty an L1-optimal model emits r times the true relief, where
   r is its correlation with the truth; this term pays for keeping amplitude.
-* ``fft_log_magnitude_loss``: matches the log power spectrum.
+* ``fft_log_magnitude_loss``: L1 on the log amplitude spectrum.
 * ``sea_loss``: pulls pixels seaward of the coastline to sea level, with a
   dead zone for tide and datum.
 """

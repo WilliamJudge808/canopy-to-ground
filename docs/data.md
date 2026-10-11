@@ -8,7 +8,7 @@ redistributes imagery or third-party elevation data.
 | role | dataset | access | terms |
 |---|---|---|---|
 | label | NOAA 2022 topobathy lidar DEM, Kahoʻolawe / Lānaʻi / Maui / Molokaʻi / Oʻahu (NOAA OCM project 10335), 0.5 m bare earth, EPSG:6634 | NOAA Digital Coast, `noaa-nos-coastal-lidar-pds` S3 bucket (VRT) | public domain (US Government) |
-| prior | Copernicus GLO-30 DEM, 1° tiles N20–N21, W157–W156 | Copernicus Data Space or the AWS open-data bucket `copernicus-dem-30m` | Copernicus DEM licence; derived products must carry the notice below |
+| prior | Copernicus GLO-30 DEM, 1° tiles N20–N21, W158–W156 | Copernicus Data Space or the AWS open-data bucket `copernicus-dem-30m` | Copernicus DEM licence; derived products must carry the notice below |
 | base imagery | County of Maui aerial imagery, 2021–2023 (`Pictometry2023_MauiCounty282` tile service) | County of Maui public ArcGIS tile services | County of Maui terms; used as model input only, never redistributed |
 | imagery | Maxar Vivid 2022 mosaic via the Hawaiʻi Statewide GIS Program | `geodata.hawaii.gov` ImageServer | Hawaiʻi Statewide GIS Program terms; used as model input only, never redistributed |
 | imagery | USDA NAIP 2021 Hawaiʻi, RGB + NIR | NOAA Digital Coast mosaic `HI_NAIP_2021_9668` | public domain |

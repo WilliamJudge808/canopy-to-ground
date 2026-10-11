@@ -195,7 +195,7 @@ def main(argv: list[str] | None = None) -> None:
         ap.error("--coastline is required: a member was trained with coast inputs")
     coastline = Coastline(a.coastline, WORK_CRS) if coast else None
 
-    grid = json.loads((a.store / "grid.json").read_text())
+    grid = json.loads((a.store / "grid.json").read_text(encoding="utf-8"))
     if tuple(grid["layers"]) != layers:
         ap.error(f"store has layers {grid['layers']}, checkpoints need {list(layers)}")
     x0, y1, nx, ny, stride = grid["x0"], grid["y1"], grid["nx"], grid["ny"], grid["stride"]

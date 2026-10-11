@@ -53,7 +53,7 @@ def fetch_corpus(corpus: Path, lidar_vrt: str, cache_root: Path | None = None, w
     for split in ("train", "val"):
         (corpus / split).mkdir(parents=True, exist_ok=True)
     rejected_file = corpus / "rejected.txt"
-    rejected = set(rejected_file.read_text().split()) if rejected_file.exists() else set()
+    rejected = set(rejected_file.read_text(encoding="utf-8").split()) if rejected_file.exists() else set()
     todo = []
     for ix, iy in grid.chips_in_lonlat(*grid.CORPUS_LONLAT):
         cid = grid.chip_id(ix, iy)

@@ -109,7 +109,7 @@ def prefetch(store: Path, g: dict, prior_path: Path, workers: int = 4, max_rows:
     """Fetch missing rows into ``store``; returns how many rows the store holds afterwards."""
     store.mkdir(parents=True, exist_ok=True)
     grid_file = store / "grid.json"
-    if grid_file.exists() and json.loads(grid_file.read_text()) != g:
+    if grid_file.exists() and json.loads(grid_file.read_text(encoding="utf-8")) != g:
         raise SystemExit(f"{grid_file} describes a different grid; use a new --out")
     grid_file.write_text(json.dumps(g))
 

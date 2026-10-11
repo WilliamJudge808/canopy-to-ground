@@ -5,10 +5,10 @@
 **Bare-earth terrain on a 1 m grid under rainforest canopy, predicted from aerial imagery and a 30 m global DEM.**
 
 The 2020–2023 NOAA/USGS lidar survey of Maui County never covered windward East Maui; persistent low cloud kept the
-aircraft out until acquisition ended in March 2023. That leaves about 490 km² of steep rainforest with nothing finer
-than 30 m elevation data. This project trains a network that reads several years of aerial and satellite imagery
-together with the Copernicus GLO-30 radar DEM, predicts the ground surface under the forest, and publishes the
-result as an [interactive 3-D map](https://williamjudge808.github.io/east-maui-dtm/).
+aircraft out until acquisition ended in March 2023. That leaves about 490 km² of steep terrain where the best
+elevation data is 30 m satellite radar. This project trains a network that reads several years of aerial and
+satellite imagery together with the Copernicus GLO-30 radar DEM, predicts the ground surface under the forest, and
+publishes the result as an [interactive 3-D map](https://williamjudge808.github.io/east-maui-dtm/).
 
 <p align="center">
   <img src="docs/figures/hero.png" alt="Copernicus 30 m DEM vs the model over Kapaula and Hanawī gulches, where no lidar exists" width="100%">
