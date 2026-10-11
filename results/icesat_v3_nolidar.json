@@ -1,0 +1,80 @@
+{
+ "protocol": "pre-registered ICESat-2 protocol, see docs/results.md section 3",
+ "n_gated": 80611,
+ "n_land": 2875,
+ "n_common": 2643,
+ "n_overpasses": 28,
+ "surfaces": {
+  "prior": {
+   "median_abs_err_m": 2.303155892180083,
+   "nmad_m": 3.414658925746191,
+   "le90_m": 11.318975278837353
+  },
+  "v1": {
+   "median_abs_err_m": 1.3065292957674046,
+   "nmad_m": 1.937060333904754,
+   "le90_m": 6.2573910290122505
+  },
+  "v3": {
+   "median_abs_err_m": 1.2555812498752843,
+   "nmad_m": 1.8615247610650965,
+   "le90_m": 5.826120492343911
+  }
+ },
+ "paired": {
+  "v1_vs_prior": {
+   "all": {
+    "point": 0.8948887439305793,
+    "lo": 0.4849717253442094,
+    "hi": 1.3742230033446958,
+    "p": 0.0,
+    "n_segments": 2643,
+    "n_overpasses": 28
+   },
+   "steep_top_quartile": {
+    "point": 1.1326582007152695,
+    "lo": 0.4771558449127724,
+    "hi": 2.64592548114425,
+    "p": 0.0,
+    "n_segments": 661,
+    "n_overpasses": 19
+   }
+  },
+  "v3_vs_prior": {
+   "all": {
+    "point": 0.8760312270942165,
+    "lo": 0.5199695322978108,
+    "hi": 1.3912234396668701,
+    "p": 0.0,
+    "n_segments": 2643,
+    "n_overpasses": 28
+   },
+   "steep_top_quartile": {
+    "point": 1.3039377938530663,
+    "lo": 0.5646431956819322,
+    "hi": 2.71464361708345,
+    "p": 0.0,
+    "n_segments": 661,
+    "n_overpasses": 19
+   }
+  },
+  "v3_vs_v1": {
+   "all": {
+    "point": 0.04435055219227024,
+    "lo": 0.016399223351470482,
+    "hi": 0.08958475100226476,
+    "p": 0.0002,
+    "n_segments": 2643,
+    "n_overpasses": 28
+   },
+   "steep_top_quartile": {
+    "point": 0.09456175931583743,
+    "lo": 0.047731453082207054,
+    "hi": 0.2509573287293563,
+    "p": 0.0,
+    "n_segments": 661,
+    "n_overpasses": 19
+   }
+  }
+ }
+}
