@@ -308,7 +308,7 @@ def accuracy(out: Path, results: Path) -> None:
         fig.text(0.04, pos.y1 + 0.024, n, fontsize=7, color="#555555")
     caption(fig, "Fig. 4 | Accuracy against independent ground truth.",
             "Median error, lower is better. a, Validation chips from the 2022 lidar survey (they also guided "
-            f"model selection); FABDEM predates it. Ours is better on {wins:.0%} of chips. "
+            f"model selection); FABDEM predates it. This model is better on {wins:.0%} of chips. "
             "b, ICESat-2 ground photons over the reconstructed area only, offset removed per overpass. "
             "c, Scored with a single model trained without this region.",
             y=0.012)
