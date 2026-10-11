@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or the East Maui map, please cite it as below. The code is MIT; the map carries the Copernicus DEM notice and the source-data terms listed in docs/data.md."
+title: "canopy-to-ground: 1 m bare-earth terrain under rainforest from aerial imagery and a 30 m DEM"
+authors:
+  - family-names: Judge
+    given-names: William
+version: 1.0.0
+date-released: 2026-10-11
+license: MIT
+repository-code: "https://github.com/WilliamJudge808/canopy-to-ground"
+url: "https://williamjudge808.github.io/east-maui-dtm/"
+keywords:
+  - remote sensing
+  - digital terrain model
+  - lidar
+  - super-resolution
+  - computer vision
